@@ -66,9 +66,7 @@ target.build_configurations.each do |build_configurations|
 	configSettings = build_configurations.build_settings
 	configSettings["CODE_SIGN_STYLE"] = $code_sign_style
 	configSettings["DEVELOPMENT_TEAM"] = $development_team
-	if configSettings["CODE_SIGN_IDENTITY"]
-		configSettings["CODE_SIGN_IDENTITY"] = $code_sign_identity
-	end
+	configSettings["CODE_SIGN_IDENTITY"] = $code_sign_identity
 	if configSettings["CODE_SIGN_IDENTITY[sdk=macosx*]"]
 		configSettings["CODE_SIGN_IDENTITY[sdk=macosx*]"] = $code_sign_identity
 	end
